@@ -22,14 +22,18 @@ from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 class IUserEmail(Interface):
     pass
 
-from codesyntax.theme import csMessageFactory as _
+from cs.discussionextender import discussionMessageFactory as _
 
 # Interface to define the fields we want to add to the comment form.                        
 class ICommentExtenderFields(Interface):
-    url = schema.TextLine(title=_(u'Website'), required=False)
+    
+    url = schema.TextLine(title=_(u'Website'), 
+                          required=False)
+    
     email = schema.TextLine(title=_(u'Email'),
                             description=_(u'The e-mail address will not be shown, it is just to contact you if requried'),
                             required=True)
+
 
 class CommentExtenderFields(Persistent):
     implements(ICommentExtenderFields)
