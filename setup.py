@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0'
+version = '1.0.1'
 
 setup(name='cs.discussionextender',
       version=version,
@@ -14,10 +14,10 @@ setup(name='cs.discussionextender',
         "Framework :: Plone",
         "Programming Language :: Python",
         ],
-      keywords='',
-      author='',
-      author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      keywords='discussion extender',
+      author='Mikel Larreategi',
+      author_email='mlarreategi@codesyntax.com',
+      url='http://github.com/codesyntax/cs.discussionextender',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['cs'],
