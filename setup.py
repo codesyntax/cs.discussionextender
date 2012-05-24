@@ -26,6 +26,8 @@ setup(name='cs.discussionextender',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'plone.app.discussion',
+          'z3c.jbot'
       ],
       entry_points="""
       # -*- Entry points: -*-
