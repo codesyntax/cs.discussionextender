@@ -4,8 +4,20 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="cs.discussionextender">
 
-  <five:registerPackage package="." initialize=".initialize" />
+    <include package="z3c.jbot" file="meta.zcml" />
 
-  <!-- -*- extra stuff goes here -*- -->
+    <browser:jbot
+        directory="overrides" />
+
+    <adapter
+        factory=".discussion.CommentExtenderFactory"
+        provides=".discussion.ICommentExtenderFields"
+        />
+
+    <adapter
+        name="email-and-url-extender"
+        factory=".discussion.CommentExtender"
+        provides="plone.z3cform.fieldsets.interfaces.IFormExtender"
+        />
   
 </configure>
