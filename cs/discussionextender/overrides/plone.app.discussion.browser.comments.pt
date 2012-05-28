@@ -10,6 +10,7 @@
                        wtool context/@@plone_tools/workflow;"
            tal:condition="python:isDiscussionAllowed or has_replies"
            i18n:domain="plone">
+
     <div class="reply"
          tal:condition="python:isAnon and not isAnonymousDiscussionAllowed">
         <form tal:attributes="action view/login_action">
@@ -33,7 +34,7 @@
                              author_home_url python:view.get_commenter_home_url(username=reply.author_username);
                              has_author_link python:author_home_url and not isAnon;
                              portrait_url python:view.get_commenter_portrait(reply.author_username);
-                             review_state python:wtool.getInfoFor(reply, 'review_state');"
+                             review_state python:wtool.getInfoFor(reply, 'review_state', 'none');"
                  tal:attributes="class python:'comment replyTreeLevel'+str(depth)+' state-'+str(review_state);
                                  style string:margin-left: ${depth}em;
                                  id string:${reply/getId}"
@@ -70,6 +71,7 @@
                               tal:replace="reply/Creator" />
                         <span tal:condition="not: reply/Creator">Anonymous</span>
                     </tal:name>
+                    <tal:posted i18n:translate="label_says">says:</tal:posted>
                     <div class="commentDate"
                          tal:content="python:view.format_time(reply.modification_date)">
                          8/23/2001 12:40:44 PM
@@ -140,14 +142,14 @@
             </div>
 
         </tal:getreplies>
-        
+
         <div tal:condition="python: has_replies and not isDiscussionAllowed"
              class="discreet"
              i18n:domain="plone.app.discussion"
              i18n:translate="label_commenting_disabled">
             Commenting has been disabled.
         </div>
-    
+
     </div>
 
     <div class="reply"
@@ -161,7 +163,7 @@
                    />
         </form>
     </div>
-    
+
     <div id="commenting" class="reply" tal:condition="python:isDiscussionAllowed and (isAnon and isAnonymousDiscussionAllowed or userHasReplyPermission)">
 
         <fieldset>
