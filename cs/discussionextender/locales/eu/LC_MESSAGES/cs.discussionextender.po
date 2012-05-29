@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs.discussionextender\n"
+"POT-Creation-Date: 2012-05-29 05:59+0000\n"
+"PO-Revision-Date: 2012-05-29 08:00+0100\n"
+"Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
+"Language-Team: eu <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"X-Poedit-Language: Basque\n"
+
+#: ./discussion.py:33
+msgid "Email"
+msgstr "E-posta"
+
+#: ./discussion.py:34
+msgid "The e-mail address will not be shown, it is just to contact you if requried"
+msgstr "E-posta ez da argitaratuko, behar izanez gero zurekin harremanetan jartzeko bakarrik erabiliko da"
+
+#: ./discussion.py:30
+msgid "Website"
+msgstr "Webgunea"
+

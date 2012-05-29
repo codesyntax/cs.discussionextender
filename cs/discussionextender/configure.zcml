@@ -5,6 +5,7 @@
     i18n_domain="cs.discussionextender">
 
     <include package="z3c.jbot" file="meta.zcml" />
+    <i18n:registerTranslations directory="locales" />
 
     <browser:jbot
         directory="overrides" />
