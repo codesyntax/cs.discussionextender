@@ -27,7 +27,6 @@ setup(name='cs.discussionextender',
           'setuptools',
           # -*- Extra requirements: -*-
           'plone.app.discussion',
-          'z3c.jbot'
       ],
       entry_points="""
       # -*- Entry points: -*-
@@ -35,6 +34,4 @@ setup(name='cs.discussionextender',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
       )

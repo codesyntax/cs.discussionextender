@@ -4,11 +4,7 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="cs.discussionextender">
 
-    <include package="z3c.jbot" file="meta.zcml" />
     <i18n:registerTranslations directory="locales" />
-
-    <browser:jbot
-        directory="overrides" />
 
     <adapter
         factory=".discussion.CommentExtenderFactory"
@@ -20,5 +16,5 @@
         factory=".discussion.CommentExtender"
         provides="plone.z3cform.fieldsets.interfaces.IFormExtender"
         />
-  
+
 </configure>
